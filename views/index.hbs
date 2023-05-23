@@ -1,0 +1,47 @@
+{{! 
+    height: 100vh (viewport height) -> tương đương với 100% chiều cao của viewport 
+    (khu vực hiển thị trên trình duyệt), tức là nó sẽ giãn đầy toàn bộ chiều cao của viewport 
+    mà không tính các thành phần khác như thanh địa chỉ hoặc thanh cuộn.
+}}
+<div class="container-fluid d-flex align-items-center" style="height: 100vh; background-color: #4B3B15;">
+  {{! 
+        mx-auto --> dùng để căn giữa
+        h-100 --> được sử dụng để đảm bảo rằng row và các cột bên trong đều có chiều cao bằng nhau 
+    }}
+  <div class="bg-white mx-auto px-4 py-4 rounded-4" style="width: 60%; height: 80%;">
+    <div class="row h-100">
+      <div class="col-6 d-flex justify-content-center h-100">
+        <img src="../public/images/logoBakerySuperior.png" style="width: 200px; height: 200px" class="rounded" alt="Cinque Terre">
+      </div>
+      <div class="col-6 h-100">
+        <h4 class="text-center fw-bold my-5" style="color: #4B3B15;">Chào mừng người quản lý</h4>
+            <form action="/index">
+                <input
+                class="form-control border border-start-0 border-end-0 border-top-0 rounded-0 my-4"
+                style="background-color: transparent;"
+                type="text"
+                id="email"
+                placeholder="Tài khoản"
+                name="email"
+                />
+                <input
+                class="form-control border border-start-0 border-end-0 border-top-0 rounded-0 my-4"
+                style="background-color: transparent;"
+                type="text"
+                id="password"
+                placeholder="Mật khẩu"
+                name="password"
+                />
+                <div class="d-flex justify-content-center" style="margin-top: 100px;">
+                    <button
+                        type="submit"
+                        style="width: 50%; height: 42px; background-color: #4B3B15;" 
+                        class="btn rounded-pill text-white fw-bold">
+                            Đăng nhập
+                    </button>
+                </div>
+            </form>
+      </div>
+    </div>
+  </div>
+</div>
